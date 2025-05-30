@@ -3,7 +3,7 @@ def music_test() :
 
     genre_result = "" #  api에 적용하기 위해서 변수 생성
 
-    A1 = input("1. 밝은 분위기의 노래를 선호하나요? (Y/N)").strip().upper() 
+    A1 = input(" 밝은 분위기의 노래를 선호하나요? (Y/N)").strip().upper() 
     # 1. A1으로 한 이유는 질문이 너무 많아서 축약 했어요
     # 2. strip() 은 공백제거 3. upper은 대문자로 변환
     
