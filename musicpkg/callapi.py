@@ -1,8 +1,19 @@
 def verify_spotipy() :
     try:
         import spotipy
-    except ImportError: # 스포티파이 API import 해보고 설치가 안 되어있을 경우 설치 후 import
+    except ImportError:
         import subprocess
         import sys
+        print("Spotipy API를 다운로드합니다.")
         subprocess.check_call([sys.executable, "-m", "pip", "install", "spotipy"])
         import spotipy
+
+def verify_pillow() :
+    try:
+        import PIL
+    except ImportError:
+        import subprocess
+        import sys
+        print("Pillow를 다운로드합니다다.")
+        subprocess.check_call([sys.executable, "-m", "pip", "install", "Pillow"])
+        import PIL
