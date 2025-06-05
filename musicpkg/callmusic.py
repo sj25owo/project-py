@@ -6,8 +6,7 @@ import random
 def get_access_token(): # 스포티파이 API 사용 위해 토큰 발급(홈페이지에 나와있는 방식 그대로)
     client_id = '963c5f6c205b4912a1be1c661595d6a8'
     client_secret = '5ab21414c3b64b318e6d987c5e4cde36'
-    redirect_url = "http://127.0.0.1:8888/callback"
-
+    
     encoded = base64.b64encode(f'{client_id}:{client_secret}'.encode('utf-8')).decode('ascii')
     headers = {'Authorization': f'Basic {encoded}'}
 
@@ -17,10 +16,11 @@ def get_access_token(): # 스포티파이 API 사용 위해 토큰 발급(홈페
     access_token = response.json()['access_token']
     return access_token
 
+# 스포티파이 API 사용 위해 토큰 발급
 def create_spotify_client(access_token):
     return spotipy.Spotify(auth=access_token)
 
-def search_tracks(genre, total=100, sample_size=10):
+def search_tracks(genre, sample_size=10):
     access_token = get_access_token()
     sp = create_spotify_client(access_token)
 

@@ -3,7 +3,7 @@ def music_test() :
 
     genre_result = "" #  api에 적용하기 위해서 변수 생성
 
-    A1 = input(" 밝은 분위기의 노래를 선호하나요? (Y/N)").strip().upper() 
+    A1 = input("1. 밝은 분위기의 노래를 선호하나요? (Y/N)").strip().upper() 
     # 1. A1으로 한 이유는 질문이 너무 많아서 축약 했어요
     # 2. strip() 은 공백제거 3. upper은 대문자로 변환
     
@@ -46,9 +46,4 @@ def music_test() :
         print ("Y 또는 N을 입력해주세요")
         result = "None"
 
-    return  result
-
-    
-# 메인코드에 넣을것!
-result = music_test() 
-print (f" 추천하는 장르는 {result} 입니다. 해당 장르의 음악을 추천해드릴게요")
+    return result
