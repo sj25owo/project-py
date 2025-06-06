@@ -70,7 +70,3 @@ def recom_music(x) :
     show_next_track()
 
     root.mainloop()
-
-"""
-recom_music(genre)
-"""

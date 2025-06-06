@@ -109,11 +109,3 @@ def start_test():
             window.quit()
 
     q1()
-
-"""
-main
-if result == True :
-            start_test()
-        elif result == False :
-            recom_music()
-"""
