@@ -54,32 +54,32 @@ def start_test():
     no_btn.place(x=400, y=300, anchor='center')
 
     def q1():
-        label.config(text="Q. 밝은 분위기의 노래를 좋아하시나요?")
+        label.config(text="Q. 밝은 분위기의 노래를 선호하시나요?")
         yes_btn.config(command=q2)
         no_btn.config(command=q7)
 
     def q2():
-        label.config(text="Q. 리듬감 있는 음악을 좋아하시나요?")
+        label.config(text="Q. 리듬감 있는 음악을 선호하시나요?")
         yes_btn.config(command=q3)
         no_btn.config(command=q6)
 
     def q3():
-        label.config(text="Q. 아이돌 스타일의 음악을 좋아하시나요?")
+        label.config(text="Q. 아이돌 스타일의 음악을 선호하시나요?")
         yes_btn.config(command=lambda: show_result("K-POP"))
         no_btn.config(command=q4)
 
     def q4():
-        label.config(text="Q. 밴드 사운드를 좋아하시나요?")
+        label.config(text="Q. 밴드사운드를 선호하시나요?")
         yes_btn.config(command=q5)
         no_btn.config(command=lambda: show_result("Dance Pop"))
 
     def q5():
-        label.config(text="Q. 랩 스타일의 음악을 좋아하시나요?")
+        label.config(text="Q. 랩처럼 리듬감있는 음악을 선호하시나요?")
         yes_btn.config(command=lambda: show_result("Hip-Hop"))
         no_btn.config(command=lambda: show_result("Rock"))
 
     def q6():
-        label.config(text="Q. 부드러운 목소리의 음악을 좋아하시나요?")
+        label.config(text="Q. 부드러운 목소리의 음악을 선호하시나요?")
         yes_btn.config(command=lambda: show_result("Indie Pop"))
         no_btn.config(command=lambda: show_result("Pop"))
 
@@ -89,12 +89,12 @@ def start_test():
         no_btn.config(command=q8)
 
     def q8():
-        label.config(text="Q. 악기 연주가 중심인 음악을 좋아하시나요?")
+        label.config(text="Q. 악기 연주가 중심인 음악을 선호하시나요??")
         yes_btn.config(command=q9)
         no_btn.config(command=lambda: show_result("Acoustic"))
 
     def q9():
-        label.config(text="Q. 클래식 연주를 좋아하시나요?")
+        label.config(text="Q. 클래식 연주를 선호하나요?")
         yes_btn.config(command=lambda: show_result("Classical"))
         no_btn.config(command=lambda: show_result("Jazz"))
 
@@ -109,11 +109,3 @@ def start_test():
             window.quit()
 
     q1()
-
-"""
-main
-if result == True :
-            start_test()
-        elif result == False :
-            recom_music()
-"""
