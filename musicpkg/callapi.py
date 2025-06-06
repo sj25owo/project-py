@@ -14,6 +14,6 @@ def verify_pillow() :
     except ImportError:
         import subprocess
         import sys
-        print("Pillow를 다운로드합니다다.")
+        print("Pillow를 다운로드합니다.")
         subprocess.check_call([sys.executable, "-m", "pip", "install", "Pillow"])
         import PIL
