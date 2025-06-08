@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 
-class Button(tk.Button):
+class Button(tk.Button): # 마우스를 버튼 위에 올리면 버튼이 일시적으로 커지는 효과
     def __init__(self, master=None, **kwargs):
         super().__init__(master, **kwargs)
 
@@ -26,7 +26,7 @@ class Button(tk.Button):
         self.config(**self.default_size)
 
 def start_window() :
-    global window
+    global window # tkinter 기본 설정
     global result
     window = tk.Tk()
     window.title("테스트 중심 음악 추천 프로그램")
@@ -37,7 +37,7 @@ def start_window() :
     label = tk.Label(window, text="테스트 중심 음악 추천 프로그램", font=("나눔고딕", 14, "bold"), fg="black", bg="white")
     label.pack(pady=40)
 
-    global start_btn
+    global start_btn # 시작버튼
     start_btn = Button(window, text="시작", font=("나눔고딕", 12), bg="#a8d8ea", width=12, command=start_test)
 
     start_btn.pack(pady=10)
@@ -46,10 +46,10 @@ def start_window() :
     return result
 
 def start_test():
-    yes_btn = Button(window, text="YES", font=("나눔고딕", 12), bg="#a8d8ea", width=12)
+    yes_btn = Button(window, text="YES", font=("나눔고딕", 12), bg="#a8d8ea", width=12) # Y/N 버튼
     no_btn = Button(window, text="NO", font=("나눔고딕", 12), bg="#f8a5c2", width=12)
 
-    start_btn.pack_forget()
+    start_btn.pack_forget() # 시작 버튼 숨기기
     yes_btn.place(x=200, y=300, anchor='center')
     no_btn.place(x=400, y=300, anchor='center')
 
@@ -101,6 +101,7 @@ def start_test():
     def show_result(x):
         messagebox.showinfo("테스트 결과", f"당신에게 추천하는 장르는 {x}")
         retest = messagebox.askokcancel("테스트 결과", f"{x} 장르의 노래를 추천해드릴까요?\n취소를 선택하시면 테스트를 다시 진행합니다.")
+        # retest에 True/False로 저장
         if not retest:
             q1()
         else:
