@@ -1,4 +1,4 @@
-def ui(): # ui로 진행행
+def ui(): # ui로 진행
     from testpkg import TEST_ui
     from musicpkg import callmusic_ui
     from musicpkg import callapi
@@ -26,7 +26,7 @@ def text(): # 터미널에서 진행
                 print(" 다음에 또 테스트 해주세요! 다양한 장르로 추천해드릴게요! ")
                 break
 
-def question() :
+def question() : # 진행 플랫폼 결정
     mode = input(" 어떤것으로 지원해드릴까요? UI 모드로 실행하려면 1, 텍스트 입력 모드는 2 을 입력해주세요: ")
     if mode == "1":
         print(" UI 로 테스트를 진행할게요 ")
