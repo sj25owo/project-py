@@ -53,7 +53,8 @@ def recom_music(x) :
         album_img_label.config(image=album_img)
         album_img_label.image = album_img
 
-        info_label.config(text=f"🎵 곡명: {name}\n🎤 아티스트: {artist}\n💿 앨범: {album}\n📅 발매일: {release}") # 위에서 저장한 음악 정보 출력
+        info_label.config(text=f"🎵 곡명: {name}\n🎤 아티스트: {artist}\n💿 앨범: {album}\n📅 발매일: {release}")
+        # 위에서 저장한 음악 정보 출력
         index += 1
 
     def open_in_browser():
